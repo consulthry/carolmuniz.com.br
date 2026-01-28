@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dra. Carol Muniz – Psicóloga</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0E2A3B',
+            secondary: '#163A55',
+            accent: '#2C5C7A',
+            footer: '#7FA58B',
+            textbase: '#4A4A4A'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-body text-textbase">
+
+<!-- HEADER -->
+<header class="fixed top-0 w-full bg-white z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <div class="flex items-center space-x-2">
+      <span class="font-heading text-3xl text-primary">CM</span>
+      <span class="font-heading text-lg text-primary">Carol Muniz</span>
+    </div>
+
+    <nav class="hidden md:flex space-x-8 text-lm">
+      <a href="#inicio" class="hover:text-accent">Início</a>
+      <a href="#sobre" class="hover:text-accent">Sobre</a>
+      <a href="#atendimentos" class="hover:text-accent">Atendimentos</a>
+      <a href="#contato" class="hover:text-accent">Contato</a>
+      <a href="#localizacao" class="hover:text-accent">Localização</a>
+    </nav>
+
+    <a href="https://wa.me/5585999397955?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
+      target="_blank" rel="noopener noreferrer" 
+      class="bg-primary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary">
+      Agendar consulta
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="h-screen bg-cover bg-center relative"
+  style="background-image:url('assets/img/consultorio.jpg');">
+  <div class="absolute inset-0 bg-primary/70"></div>
+
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+    <h1 class="font-heading text-white text-5xl md:text-7xl tracking-wide">
+      CAROL MUNIZ
+    </h1>
+    <div class="w-24 h-px bg-white my-6"></div>
+    <p class="text-white max-w-xl text-2xl font-light">
+      Psicóloga Clínica e Psicanalista Freudiana<br>
+      Atendimento presencial e on-line para adolescentes e adultos
+    </p>
+
+    <a href="https://wa.me/5585999397955?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
+      target="_blank" rel="noopener noreferrer"
+       class="mt-8 bg-white text-primary px-10 py-3 rounded-full hover:bg-gray-100">
+      Agendar consulta
+    </a>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <!-- FOTO -->
+      <div class="flex justify-center md:justify-start">
+        <img
+          src="assets/img/carolmuniz.jpg"
+          alt="Dra. Carol Muniz"
+          class="w-full max-w-md rounded-2xl shadow-md object-cover"
+                    >
+      </div>
+
+      <!-- TEXTO -->
+      <div>
+        <h2 class="font-heading text-4xl text-primary mb-6">
+          Dra. Carol Muniz - CRP 11/10073
+        </h2>
+
+        <p class="leading-relaxed mb-8 text-xl">
+Sou psicóloga clínica e psicanalista de orientação freudiana, com 17 anos de experiência profissional. Atuo como supervisora clínica, palestrante e coordenadora de seminários, fundamentando minha prática em um diálogo permanente com a filosofia, que sustenta a reflexão teórica, ética e clínica do trabalho analítico.
+        </p>
+
+        <p class="leading-relaxed mb-8 text-xl">
+Realizo atendimentos psicológicos com adolescentes e adultos, além de desenvolver orientação parental e acompanhamento de famílias em contextos de separação, divórcio e questões relacionadas à guarda dos filhos. Também realizo acompanhamento psicológico de gestantes, com atenção aos aspectos psíquicos envolvidos na constituição da relação mãe–bebê durante o período intrauterino.
+        </p>
+        
+        </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ATENDIMENTOS -->
+<section id="atendimentos" class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="font-heading text-4xl text-primary text-center mb-12">
+      Atendimentos
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 shadow text-center hover:bg-primary hover:text-white transition">
+        <h3 class="font-heading text-xl mb-3"><strong>Atendimento Psicológico com Adolescentes</strong></h3>
+        <p>Espaço clínico voltado à escuta e à elaboração das questões próprias da adolescência, considerando os impasses subjetivos, emocionais e relacionais desse período, bem como o contexto familiar e institucional.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 shadow text-center hover:bg-primary hover:text-white transition">
+        <h3 class="font-heading text-xl mb-3"><strong>Atendimento Psicológico com Adultos</strong></h3>
+        <p>Processo clínico fundamentado na psicanálise, que favorece a reflexão sobre conflitos psíquicos, relações, escolhas e modos de sofrimento, respeitando a singularidade de cada sujeito.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 shadow text-center hover:bg-primary hover:text-white transition">
+        <h3 class="font-heading text-xl mb-3"><strong>Orientação Parental</strong></h3>
+        <p>Trabalho direcionado aos responsáveis, com foco na reflexão sobre as funções parentais, os vínculos familiares e os desafios envolvidos na educação e no cuidado emocional de filhos.
+        </p>
+      </div>
+      
+      <div class="bg-white p-8 shadow text-center hover:bg-primary hover:text-white transition">
+        <h3 class="font-heading text-xl mb-3"><strong>Acompanhamento Psicológico de Gestantes</strong></h3>
+        <p>Espaço clínico destinado à gestante, com atenção aos aspectos psíquicos envolvidos na gestação e na constituição da relação mãe–bebê durante o período intrauterino.</p>
+      </div>
+
+      <div class="bg-white p-8 shadow text-center hover:bg-primary hover:text-white transition">
+        <h3 class="font-heading text-xl mb-3"><strong>Acompanhamento em Contextos de Separação e Divórcio</strong></h3>
+        <p>Atendimento voltado à escuta e à elaboração psíquica dos impactos da separação conjugal, incluindo questões relacionadas à coparentalidade e à guarda dos filhos.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 shadow text-center hover:bg-primary hover:text-white transition">
+        <h3 class="font-heading text-xl mb-3"><strong>Supervisão Clínica</strong></h3>
+        <p>Espaço de reflexão teórico-clínica destinado a psicólogos, voltado à discussão de casos, à sustentação ética da prática e ao aprofundamento da escuta clínica.
+        </p>
+      </div>
+      
+      <div class="bg-white p-8 shadow text-center hover:bg-primary hover:text-white transition">
+        <h3 class="font-heading text-xl mb-3"><strong>Seminários e Palestras</strong></h3>
+        <p>Atividades voltadas à transmissão teórica e à reflexão clínica, com base na psicanálise e em interlocução com a filosofia.
+        </p>
+      </div>
+
+      
+      <div class="bg-white p-8 shadow text-center hover:bg-primary hover:text-white transition">
+        <h3 class="font-heading text-xl mb-3"><strong>Atendimento Psicológico On-line</strong></h3>
+        <p>Atendimento realizado por plataforma segura, conforme as normas do Conselho Federal de Psicologia.</p>
+      </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-24 bg-primary text-white">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="font-heading text-4xl mb-6">Contato</h2>
+    <p class="mb-8">
+      Consultas presenciais e online.
+    </p>
+
+<div class="flex flex-col md:flex-row justify-center gap-6">
+      <a href="https://wa.me/5585999397955?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
+      target="_blank" rel="noopener noreferrer" 
+      class="bg-white text-primary px-8 py-3 rounded-full hover:bg-gray-100 transition"
+      >
+      WhatsApp
+      </a>
+
+      <a href="#localizacao" class="bg-white text-primary px-8 py-3 rounded-full hover:bg-gray-100 transition">
+        Localização
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section id="localizacao" class="bg-gray-100 py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 href="#localizacao" class="font-heading text-4xl text-primary text-center mb-12">
+      Localização
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <!-- TEXTO -->
+      <div>
+        <p class="mb10 text-2xl">
+          <strong>Endereço:</strong><br>
+          Centro Especializado Integrado - CEI<br>
+          Rua Silva Paulet, 1583 – Aldeota<br>
+          Fortaleza – CE
+        </p>
+      </div>
+
+      <!-- MAPA -->
+      <div class="w-full h-96 rounded-2xl overflow-hidden shadow-md">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1970.4083731619417!2d-38.507487235873846!3d-3.7375807717032443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c748f4d15f0edb%3A0x345f054f1c04e34e!2sCentro%20Especializado%20Integrado!5e0!3m2!1spt-BR!2sbr!4v1769628737296!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-footer text-white py-10">
+  <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols- gap-8 text-lx text-center">
+
+    <div>
+      <p class="font-heading text-xl">Dra. Carol Muniz</p>
+      <p>Centro Especializado Integrado - CEI</p>
+      <p>Rua Silva Paulet, 1583 – Aldeota</p>
+      <p>Ao lado do Colégio Christus</p>
+      <p><a href="https://wa.me/5585999397955?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
+      target="_blank" rel="noopener noreferrer">(85)99939-7955</a></p>      
+      <p>Fortaleza – CE</p>
+    </div>
+    </div>
+
+  </div>
+
+  <div class="text-center text-ls mt-8">
+    © 2026 Carol Muniz · Todos os direitos reservados
+  </div>
+</footer>
+
+</body>
+</html>
