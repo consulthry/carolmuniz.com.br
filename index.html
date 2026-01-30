@@ -118,12 +118,14 @@ content="Psicóloga clínica em Fortaleza, Carol Muniz atua com escuta ética e 
 <!-- HEADER -->
 <header class="fixed top-0 w-full bg-white z-50 shadow-sm">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-    <div class="flex items-center space-x-2">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2 order-2 md:order-none">
       <span class="font-heading text-3xl text-primary">CM</span>
       <span class="font-heading text-lg text-primary">Carol Muniz</span>
     </div>
 
-    <nav class="hidden md:flex space-x-8 text-base">
+    <!-- NAV DESKTOP -->
+    <nav class="hidden md:flex space-x-8 text-base" aria-label="Menu principal">
       <a href="#inicio" class="hover:text-accent">Início</a>
       <a href="#sobre" class="hover:text-accent">Sobre</a>
       <a href="#atendimentos" class="hover:text-accent">Atendimentos</a>
@@ -141,13 +143,54 @@ content="Psicóloga clínica em Fortaleza, Carol Muniz atua com escuta ética e 
         Instagram
       </a>
     </nav>
-
+  
+    <!-- CTA -->
     <a href="https://wa.me/5585999397955?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
       target="_blank" rel="noopener noreferrer" 
-      class="bg-primary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary">
+      class="order-3 md:order-none bg-primary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary">
       Agendar consulta
     </a>
+    
+    <!-- BOTÃO MOBILE -->
+    <button id="menu-toggle"
+      class="md:hidden order-1 md:order-none inline-flex items-center justify-center rounded-md p-2 text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary"
+      aria-controls="menu-mobile"
+      aria-expanded="false"
+      aria-label="Abrir menu">
+      <!-- Ícone hamburger -->
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
   </div>
+  
+  <!-- MENU MOBILE -->
+  <nav id="menu-mobile"
+    class="hidden md:hidden bg-white border-t shadow-sm"
+    aria-label="Menu principal mobile">
+    <ul class="flex flex-col px-6 py-4 space-y-4 text-base">
+      <li><a href="#inicio" class="block">Início</a></li>
+      <li><a href="#sobre" class="block">Sobre</a></li>
+      <li><a href="#atendimentos" class="block">Atendimentos</a></li>
+      <li><a href="#contato" class="block">Contato</a></li>
+      <li><a href="#localizacao" class="block">Localização</a></li>
+      <li><a href="/reflexoes/" class="block">Reflexões</a></li>
+      <li><a href="https://wa.me/5585999397955?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="block">Agendar consulta</a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/psicologacarolmuniz/"
+           target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm9.5 2.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
+          </svg>
+          Instagram
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
 </header>
 
 <!-- HERO -->
@@ -157,7 +200,7 @@ content="Psicóloga clínica em Fortaleza, Carol Muniz atua com escuta ética e 
 
   <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
     <h1 class="font-heading text-white text-5xl md:text-7xl tracking-wide">
-      Carol Muniz – Psicóloga Clínica
+      Carol Muniz<br>Psicóloga Clínica
     </h1>
     <div class="w-24 h-px bg-white my-6"></div>
     <p class="text-white max-w-xl text-2xl font-light">
@@ -395,6 +438,39 @@ Realizo atendimentos psicológicos com adolescentes e adultos, além de desenvol
     © 2026 Carol Muniz · Todos os direitos reservados
   </div>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu-mobile');
+
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('hidden');
+    });
+
+    // Fecha ao clicar em qualquer link
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fecha com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>
